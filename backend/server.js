@@ -20,6 +20,14 @@ connection.once('open', () => {
     console.log("Risk Register Database Connection Established Successfully");
 })
 
+
+//CORS ON DEPLOYMENT
+app.use(function(request, response, next) {
+    response.header("Access-Control-Allow-Origin", "http://localhost:5000"); // update to match the domain you will make the request from
+    response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });  
+
 //Routes for the CRUD
 const riskRouter = require('./routes/Risk');
 const locationRouter = require('./routes/Location');
