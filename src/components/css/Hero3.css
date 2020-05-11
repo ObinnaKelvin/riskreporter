@@ -1,0 +1,8 @@
+.cover3 {
+    background: url('../../img/risk003.png');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    margin-bottom: 20px;
+    transition-duration: 5s;
+} 
